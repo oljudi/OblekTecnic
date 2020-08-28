@@ -5,11 +5,9 @@ exports.users = async (req, res, next) => {
   if (users) {
     res.status(200).json({ success: true, users });
   } else {
-    res
-      .status(500)
-      .json({
-        success: false,
-        msg: "Algo salio mal, intenta de nuevo mas tarde",
-      });
+    res.status(500).json({
+      success: false,
+      msg: "Algo salio mal, intenta de nuevo mas tarde",
+    });
   }
 };

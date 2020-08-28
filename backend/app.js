@@ -24,12 +24,7 @@ const debug = require("debug")(
 
 const app = express();
 
-app.use(
-  cors({
-    credentials: true,
-    origin: [process.env.FRONTENDPOINT],
-  })
-);
+app.use(cors());
 
 app.use(
   session({
